@@ -22,3 +22,16 @@ class Singleton{
 		return instance;
 	}
 }
+
+//Method C; Lazy init, instance holder
+class Singleton{
+	private Singleton();
+	
+	private static Class SingletonHolder{
+		public final static INSTANCE = new Singleton();
+	}
+	
+	public Singleton getInstance(){
+		return SingletonHolder.INSTANCE;
+	}
+}
