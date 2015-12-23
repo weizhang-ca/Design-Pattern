@@ -28,7 +28,7 @@ class Singleton{
 	private Singleton();
 	
 	private static Class SingletonHolder{
-		public final static INSTANCE = new Singleton();
+		private final static INSTANCE = new Singleton();
 	}
 	
 	public Singleton getInstance(){
